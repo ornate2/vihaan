@@ -1,0 +1,63 @@
+
+ 
+##Get Call
+@server = http://localhost:4004
+# @server = http://localhost:40553
+ 
+# Get {{server}}/odata/v4/catalog/Materials
+ 
+ 
+# Post Call ======
+
+POST {{server}}/odata/v4/catalog/Materials HTTP/1.1
+Content-Type: application/json
+
+{
+    "Material": "ORNATE Material",
+    "Description": "ORNATE Description",
+    "CreatedOn": "2024-05-27",
+    "Revision": "ORNATE Revision",
+    "BaseUnitOfMeasurement": "ORNATEUnit",
+    "Serviceability": "ORNATE Serviceability",
+    "PartDeletionDomestic": true,
+    "PartDeletionInternational": false,
+    "PartReleaseStatus": "ORNATE Release Status",
+    "ModelCode": "ORNATE Model Code",
+    "Division": "ORNATE Division",
+    "InterchangeableParts": true,
+    "LastServiceableDateDomestic": "2024-05-27",
+    "LastServiceableDateInternational": "2024-05-27",
+    "ItemRevStatus": "ORNATE Item Revision Status",
+    "Weight": 10.5,
+    "WeightUnit": "kg",
+    "Length": 20.3,
+    "Width": 15.2,
+    "Height": 8.6,
+    "DimensionUnit": "cm",
+    "BasicMaterial": "ORNATE Basic Material",
+    "MaterialClassification": "ORNATE Material Classification",
+    "MaterialCode": "ORNATE Material Code",
+    "MaterialGrade": "ORNATE Material Grade",
+    "HazardousMaterialCompliance": false,
+    "MaterialQuality": "ORNATE Material Quality",
+    "DateNonCurrentDomestic": "2024-05-27",
+    "DateNonCurrentInternational": "2024-05-27",
+    "MaterialSystem": "ORNATE Material System",
+    "SubSystem": "ORNATE SubSystem",
+    "PartFamily": "ORNATE Part Family",
+    "ManufacturingProcess": "ORNATE Manufacturing Process",
+    "Source": "ORNATE Source",
+    "CADSurfaceArea": 150.75,
+    "Volume": 300.25,
+    "VolumeUnit": "m^3",
+    "StorageConditions": "ORNATE Storage Conditions",
+    "ShelfLife": 24,
+    "HeatTreatment": "ORNATE Heat Treatment",
+    "SurfaceTreatment": "ORNATE Surface Treatment",
+    "KitTagging": true,
+    "CanPartBeSoldSeparately": false,
+    "ShelfLifeDetails": "ORNATE Shelf Life Details",
+    "ShelfLifeUnitOfMeasurement": "months"
+}
+
+ 

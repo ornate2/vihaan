@@ -1,0 +1,8 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <Button
+    id="customAction"
+    text="Custom Button"
+    press="onCustomActionPress" />
+</core:FragmentDefinition>

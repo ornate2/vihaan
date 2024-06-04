@@ -1,0 +1,52 @@
+namespace vihaan.data;
+
+using { managed } from '@sap/cds/common';
+
+entity Materials : managed {
+  key MaterialID        : UUID;
+  Material              : String(50);
+  Description           : String(255);
+  CreatedOn             : Date;
+  Revision              : String(50);
+  BaseUnitOfMeasurement : String(10);
+  Serviceability        : String(50);
+  PartDeletionDomestic  : Boolean;
+  PartDeletionInternational : Boolean;
+  PartReleaseStatus     : String(50);
+  ModelCode             : String(50);
+  Division              : String(50);
+  InterchangeableParts  : Boolean;
+  LastServiceableDateDomestic : Date;
+  LastServiceableDateInternational : Date;
+  ItemRevStatus         : String(50);
+  Weight                : Decimal(5,2);
+  WeightUnit            : String(10);
+  Length                : Decimal(5,2);
+  Width                 : Decimal(5,2);
+  Height                : Decimal(5,2);
+  DimensionUnit         : String(10);
+  BasicMaterial         : String(50);
+  MaterialClassification : String(50);
+  MaterialCode          : String(50);
+  MaterialGrade         : String(50);
+  HazardousMaterialCompliance : Boolean;
+  MaterialQuality       : String(50);
+  DateNonCurrentDomestic : Date;
+  DateNonCurrentInternational : Date;
+  MaterialSystem        : String(50);
+  SubSystem             : String(50);
+  PartFamily            : String(50);
+  ManufacturingProcess  : String(50);
+  Source                : String(50);
+  CADSurfaceArea        : Decimal(10,2);
+  Volume                : Decimal(10,2);
+  VolumeUnit            : String(10);
+  StorageConditions     : String(255);
+  ShelfLife             : Integer;
+  HeatTreatment         : String(255);
+  SurfaceTreatment      : String(255);
+  KitTagging            : Boolean;
+  CanPartBeSoldSeparately : Boolean;
+  ShelfLifeDetails      : String(255);
+  ShelfLifeUnitOfMeasurement : String(10);
+}

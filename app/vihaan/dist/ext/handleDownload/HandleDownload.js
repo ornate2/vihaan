@@ -1,0 +1,1 @@
+sap.ui.define(["sap/m/MessageToast"],function(n){"use strict";return{handleDownload:function(e){n.show("Custom handler invoked.")}}});

@@ -1,0 +1,42 @@
+{
+  "name": "Vihaan",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "@sap/cds-hana": "^2",
+    "@sap/xssec": "^3",
+    "connect-multiparty": "^2.2.0",
+    "express": "^4",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.10",
+    "eslint": "^9",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-vihaan": "cds watch --open vihaan/webapp/index.html?sap-ui-xx-viewCache=false",
+    "undeploy": "cf undeploy Vihaan --delete-services --delete-service-keys --delete-service-brokers",
+    "build": "ui5 build --config=ui5.yaml --all --clean-dest --dest dist",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
+    "build1": "rimraf resources mta_archives && mbt build --mtar archive"
+  },
+  "cds": {
+    "requires": {
+      "db": "hana",
+      "auth": "xsuaa"
+    }
+  },
+  "sapux": [
+    "app/vihaan"
+  ]
+}
