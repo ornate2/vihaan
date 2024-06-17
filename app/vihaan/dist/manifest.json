@@ -59,58 +59,6 @@
         }
     },
     "sap.ui5": {
-        "extends": {
-            "extensions": {
-                "sap.ui.commands": {
-                    "vihaan#myListReportComponent": {
-                        "CustomActionCommand": {
-                            "shortcut": "Ctrl+G"
-                        }
-                    }
-                },
-                "sap.ui.controllerExtensions": {
-                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "controllerName": "vihaan.ext.controller.ListReportExtension"
-                    },
-                    "sap.fe.templates.ListReport.ListReportController": {
-                        "controllerName": "vihaan.ext.fragment.CustomAction"
-                    }
-                },
-                "sap.ui.viewExtensions": {
-                    "sap.suite.ui.generic.template.ListReport.view.ListReport": {
-                        "AfterTableToolbar": {
-                            "fragmentName": "vihaan.ext.list.CustomActionFragment",
-                            "type": "sap.ui.core.Fragment"
-                        }
-                    }
-                }
-            }
-        },
-        "sap.ui.generic.app": {
-            "pages": [
-                {
-                    "component": {
-                        "name": "sap.suite.ui.generic.template.ListReport",
-                        "listReport": {
-                            "table": {
-                                "type": "ResponsiveTable",
-                                "toolBar": {
-                                    "actions": {
-                                        "001": {
-                                            "requiresSelection": false,
-                                            "text": "Upload Excel",
-                                            "press": "vihaan.ext.controller.ListReportExtension.handleUpload",
-                                            "visible": true,
-                                            "enabled": true
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        },
         "flexEnabled": false,
         "resourceRoots": {
             "cc.spreadsheetimporter.v0_34_1": "./thirdparty/customcontrol/spreadsheetimporter/v0_34_1"
@@ -211,7 +159,6 @@
                                     }
                                 }
                             },
-                            "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#tableView",
                             "views": {
                                 "paths": [
                                     {
@@ -235,8 +182,29 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
-                            "contextPath": "/Materials"
+                            "contextPath": "/Materials",
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.FieldGroup#VihaanData": {
+                                    "actions": {
+                                        "002": {
+                                            "press": "vihaan.ext.controller.Custom.onclick",
+                                            "visible": true,
+                                            "enabled": true,
+                                            "text": "Custom Button"
+                                        }
+                                    }
+                                }
+                            }
                         }
+                    }
+                }
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.fe.templates.ListReport.ListReportController": {
+                        "controllerName": "vihaan.ext.fragment.CustomAction"
                     }
                 }
             }

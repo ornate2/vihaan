@@ -182,7 +182,19 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Materials"
+              "contextPath": "/Materials",
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.FieldGroup#VihaanData": {
+                  "actions": {
+                    "002": {
+                      "press": "vihaan.ext.controller.Custom.onclick",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Custom Button"
+                    }
+                  }
+                }
+              }
             }
           }
         }

@@ -8,7 +8,7 @@ sap.ui.define([
     return {
         onclick: function(oEvent) {
             // Show a message toast
-            MessageToast.show("Custom handler invoked.");
+            // MessageToast.show("Custom handler invoked.");
 
             // Define the correct path to your OData service
             var sServiceUrl = "/odata/v4/catalog/"; // Adjust this according to your deployment settings
